@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<nav class="navbar navbar-default">
+  <div class="container">
+    <a class="navbar-brand" href="/">BabyBicep</a>
+    <a class="navbar-brand" href="/workouts/new">New Workout</a>
+    <a class="navbar-brand" href="/workouts/">All Workouts</a>
+  </div>
+</nav>
+<div class="container">
 <%= yield %>
+</div>
 
 </body>
 </html>
