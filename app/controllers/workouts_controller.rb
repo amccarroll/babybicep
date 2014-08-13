@@ -3,6 +3,20 @@ class WorkoutsController < ApplicationController
 	def new
 	end
 
+	def edit
+		@workout = Workout.find(params[:id])
+	end
+
+	def update
+	  @workout = Workout.find(params[:id])
+	 
+	  if @workout.update(article_params)
+	    redirect_to @workout
+	  else
+	    render 'edit'
+	  end
+	end
+
 	def index
   		@workouts = Workout.all
 	end

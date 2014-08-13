@@ -1,15 +1,19 @@
 <h1>Listing Workouts</h1>
  
-<table>
+<table class="table table-bordered table-hover table-striped">
   <tr>
     <th>Trainer</th>
     <th>Intensity</th>
+    <th></th>
+    <th></th>
   </tr>
  
   <% @workouts.each do |workout| %>
     <tr>
       <td><%= workout.trainer %></td>
       <td><%= workout.intensity %></td>
+      <td><%= link_to 'Show', workout %></td>
+      <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
     </tr>
   <% end %>
 </table>
