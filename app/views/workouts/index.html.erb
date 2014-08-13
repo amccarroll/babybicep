@@ -1,0 +1,15 @@
+<h1>Listing Workouts</h1>
+ 
+<table>
+  <tr>
+    <th>Trainer</th>
+    <th>Intensity</th>
+  </tr>
+ 
+  <% @workouts.each do |workout| %>
+    <tr>
+      <td><%= workout.trainer %></td>
+      <td><%= workout.intensity %></td>
+    </tr>
+  <% end %>
+</table>

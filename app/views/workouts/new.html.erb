@@ -1,0 +1,22 @@
+<h1>Create New Workout</h1>
+
+<%= form_for :workout, url: workouts_path do |f| %>
+  <p>
+    <%= f.label :trainer %><br>
+    <%= f.text_field :trainer %>
+  </p>
+ 
+  <p>
+    <%= f.label :intensity %><br>
+    <%= f.text_field :intensity %>
+  </p>
+
+    <p>
+    <%= f.label :program %><br>
+    <%= f.text_area :program %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

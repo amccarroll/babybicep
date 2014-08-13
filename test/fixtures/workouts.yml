@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trainer: MyString
+  intensity: MyString
+  program: MyText
+
+two:
+  trainer: MyString
+  intensity: MyString
+  program: MyText
