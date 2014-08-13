@@ -18,7 +18,7 @@ class WorkoutsController < ApplicationController
 	end
 
 	def index
-  		@workouts = Workout.all
+  		@workouts = Workout.order(params[:sort])
 	end
 
 
