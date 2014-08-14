@@ -1,5 +1,5 @@
 class Workout < ActiveRecord::Base
-	has_many :comments
+	has_many :comments, dependent: :destroy
 	validates :trainer, presence: true,
 			length: { minimum: 2 }
 	validates :intensity, :program, presence: true,
