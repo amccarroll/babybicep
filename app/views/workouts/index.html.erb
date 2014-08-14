@@ -6,6 +6,7 @@
     <th><%= link_to "Intensity", :sort => "intensity" %></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
  
   <% @workouts.each do |workout| %>
@@ -14,6 +15,8 @@
       <td><%= workout.intensity %></td>
       <td><%= link_to 'Show', workout %></td>
       <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
+      <td><%= link_to 'Delete', workout_path(workout), method: :delete, data: 
+               { confirm: "Are you sure?" } %></td>
     </tr>
   <% end %>
 </table>
