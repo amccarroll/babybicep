@@ -12,3 +12,33 @@
   <strong>Program:</strong>
   <%= @workout.program %>
 </p>
+
+<h2>Comments</h2>
+<% @workout.comments.each do |comment| %>
+	<p>
+		<strong>Name:</strong>
+		<%= comment.commenter %>
+	</p>
+
+	<p>
+		<strong>Comment:</strong>
+		<%= comment.body %>
+	</p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@workout, @workout.comments.build]) do |f| %>
+	<p>
+		<%= f.label :commenter %><br>
+		<%= f.text_field :commenter %>
+	</p>
+
+	<p>
+		<%= f.label :body %><br>
+		<%= f.text_area :commenter %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
