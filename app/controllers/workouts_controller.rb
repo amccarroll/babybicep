@@ -1,6 +1,7 @@
 class WorkoutsController < ApplicationController
 
 	def new
+		@workout = Workout.new
 	end
 
 	def edit
@@ -30,8 +31,11 @@ class WorkoutsController < ApplicationController
 	def create
 	  @workout = Workout.new(article_params)
 	 
-	  @workout.save
-	  redirect_to @workout
+	  if @workout.save
+	  	redirect_to @workout
+	  else
+	  	render 'new'
+	  end
 	end
 
 private
